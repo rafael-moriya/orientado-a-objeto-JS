@@ -3,13 +3,68 @@
   <head>
     <meta charset="UTF-8">
     <title>javascript orientado a objetos </title>
-    <script src="js/js.js"></script>
+    <script src="js.js"></script>
+    <link rel="stylesheet" href="cssproj.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https: //fonts.googleapis.com/css2? family= Nunito+Sans & display=swap" rel="stylesheet">
   </head>
   <body>
+    <h1> te amo muitao minha princesinha, vc tem meu coraçao e obrigado por falar ss kskskssksksks ;) </h1>
+<header>
+  <h1>minha loja!</h1>
+</header>
+<main>
+    <div class="title">
+    <h2>produtos</h2>
+    <span>lista de produtos da loja.</span>
     <div class="card">
 
-    <h1> controle de produtos </h1>
-    <button onclick="produto.adicionar()"> adicionar</button>
-    <button onclick="produto.excluir()"> excluir</button>
+      <div class="lineinput">
+        <label>produto</label>
+        <input type="text" id=produto placeholder="nome do produto">
+      </div>
+      
+      <div class="lineinput">
+        <label>valor</label>
+        <input type="text" id=valor placeholder="valor do produto">
+      </div>
+
+      <button onclick="produto.adicionar()"> adicionar</button>
+      <button onclick="produto.excluir()"> excluir</button>
+    </div>
+    
+    <div class="content">
+
+      <table border=1>
+
+         <thead>
+         
+          <th class="center">id</th>
+          <thclass="center">produto</th>
+          <th>valor</th>
+          <th>data</th>
+          <th>ações</th>
+
+         </thead>
+
+         <tbody>
+
+           <td class="center">1</td>
+           <td>ursinho</td>
+           <td>******</td>
+           <td>17/09/2022</td>
+           <td>
+             <img src="edit.png" alt>
+             <img src="trash.png" alt>
+            </td>
+
+         </tbody>
+
+      </table>
+
+    </div>
+    
+  </main>
   </body>
 </html> 
