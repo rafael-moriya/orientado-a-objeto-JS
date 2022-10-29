@@ -1,6 +1,3 @@
-alert ('Jesus é o caminho a verdadse e a vida!!');
-
-
 class produto {
 
     constructor () {
