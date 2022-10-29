@@ -10,13 +10,14 @@
 <link href="https: //fonts.googleapis.com/css2? family= Nunito+Sans & display=swap" rel="stylesheet">
   </head>
   <body>
-    <h1> te amo muitao minha princesinha, vc tem meu coraçao e obrigado por falar ss kskskssksksks ;) </h1>
-<header>
-  <h1>minha loja!</h1>
-</header>
+
+    <header>
+      <h1>minha loja!</h1>
+    </header>
+    <h3> recadinho do dia "ainda antes que houvesse dia eu sou e nao há quem possa fazer escapar das minhas mãos, operando eu, quem impedirá?" Isaias 43:13/b</h3>
 <main>
     <div class="title">
-    <h2>produtos</h2>
+    <h2>produtos</h2> <br> <br>
     <span>lista de produtos da loja.</span>
     <div class="card">
 
@@ -30,8 +31,10 @@
         <input type="text" id=valor placeholder="valor do produto">
       </div>
 
-      <button onclick="produto.adicionar()"> adicionar</button>
-      <button onclick="produto.excluir()"> excluir</button>
+      <button onclick="produto.salvar()"> salvar</button>
+      <button onclick="produto.cancelar()"> cancelar </button>
+      <button onclick="produto.editar()"> editar</button>
+    </div>  
     </div>
     
     <div class="content">
@@ -48,17 +51,7 @@
 
          </thead>
 
-         <tbody>
-
-           <td class="center">1</td>
-           <td>ursinho</td>
-           <td>******</td>
-           <td>17/09/2022</td>
-           <td>
-             <img src="edit.png" alt>
-             <img src="trash.png" alt>
-            </td>
-
+         <tbody id="tbody">
          </tbody>
 
       </table>
@@ -66,5 +59,6 @@
     </div>
     
   </main>
+  
   </body>
 </html> 
