@@ -1,64 +1,56 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="pt-br">
+<head>
     <meta charset="UTF-8">
-    <title>javascript orientado a objetos </title>
-    <script src="js.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard- Mercado</title>
     <link rel="stylesheet" href="cssproj.css">
+    <script src="js.js"></script>
+    <link rel="manifest" href="manifest.webmanifest">
+    <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https: //fonts.googleapis.com/css2? family= Nunito+Sans & display=swap" rel="stylesheet">
-  </head>
-  <body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-items">
+            <h1>Mercado Soares</h1>
+        </div>
+    </nav>
+    <main>
+        <div class="container-main">
+            <h1>Produtos</h1>
+            <small>Lista de produtos da minha loja</small>
 
-    <header>
-      <h1>minha loja!</h1>
-    </header>
-    <h3> recadinho do dia "ainda antes que houvesse dia eu sou e nao há quem possa fazer escapar das minhas mãos, operando eu, quem impedirá?" Isaias 43:13/b</h3>
-<main>
-    <div class="title">
-    <h2>produtos</h2> <br> <br>
-    <span>lista de produtos da loja.</span>
-    <div class="card">
+            <label for="produto">Produto</label>
+            <input type="text" id="produto" placeholder="Nome do produto">
 
-      <div class="lineinput">
-        <label>produto</label>
-        <input type="text" id=produto placeholder="nome do produto">
-      </div>
-      
-      <div class="lineinput">
-        <label>valor</label>
-        <input type="text" id=valor placeholder="valor do produto">
-      </div>
+            <label for="valor">Valor</label>
+            <input type="number" id="valor" placeholder="Valor do produto">
 
-      <button onclick="produto.salvar()"> salvar</button>
-      <button onclick="produto.cancelar()"> cancelar </button>
-      <button onclick="produto.editar()"> editar</button>
-    </div>  
-    </div>
+            <div class="form-group-buttons">
+                <button id="button-salvar" onclick="produto.salvar()">Salvar</button>
+                <button id="button-cancelar" onclick="produto.cancelar()">Cancelar</button>
+            </div>
+        </div>
+    </main>
+    <section>
+        <table border="0">
+            <thead>
+            <tr>
+                <th data-title="Id">Id</th>
+                <th data-title="Produtos">Produto</th>
+                <th data-title="Valor">Valor</th>
+                <th data-title="Ações">Ações</th>
+            </tr>
+            </thead>
+            <tbody id="tbody">
+                
+            </tbody>
+         </table>
+    </section>
     
-    <div class="content">
-
-      <table border=1>
-
-         <thead>
-         
-          <th class="center">id</th>
-          <thclass="center">produto</th>
-          <th>valor</th>
-          <th>data</th>
-          <th>ações</th>
-
-         </thead>
-
-         <tbody id="tbody">
-         </tbody>
-
-      </table>
-
-    </div>
-    
-  </main>
-  
-  </body>
-</html> 
+</body>
+</html>
