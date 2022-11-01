@@ -42,7 +42,7 @@ class Produto{
           imgEdit.setAttribute("onclick", "produto.preparaEdicao("+ JSON.stringify(this.arrayProdutos[i]) +")");
 
           let imgDelete = document.createElement('img');
-          imgDelete.src = 'trash.svg';
+          imgDelete.src = 'trash.png';
           imgDelete.setAttribute("onclick", "produto.deletar("+ this.arrayProdutos[i].id +")");
 
           td_acoes.appendChild(imgEdit);
