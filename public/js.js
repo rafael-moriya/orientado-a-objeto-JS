@@ -1,5 +1,5 @@
- console.log();
- 
+ console.log(produto);
+
 class Produto{
 
   constructor(){
