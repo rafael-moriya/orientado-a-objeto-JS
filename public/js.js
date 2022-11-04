@@ -29,7 +29,7 @@ class carro {
 
             this.ano = a
         }
-    z
+    
 }
 get marca() {
     return this.marca
@@ -52,7 +52,7 @@ class carroOffRoad extends carro {
     }
     set tiporua(t) {
 
-        this.idade = t
+        this.tiporua = t
     }
     get tiporua() {
         return this.tiporua
@@ -65,12 +65,12 @@ carro1.setmarca = "bmw"
 carro1.setpneu = "aro 24"
 carro1.tiporua = "terrenos aridos"
 console.log("carro1: " + carro1)
-carri1.info()
+carro1.info()
 // segundo carro
-let dog2 = new cachorro()
+let carro22 = new carroOffRoad()
 carro2.setano = 2
 carro2.setmarca = "marca"
-carro1.setpneu = "aro 25"
-carro1.tiporua = "terrenos aridos"
-console.log("carro2: " + dog2)
+carro2.setpneu = "aro 25"
+carro2.tiporua = "terrenos aridos"
+console.log("carro2: " + carro2)
 carro2.info()
