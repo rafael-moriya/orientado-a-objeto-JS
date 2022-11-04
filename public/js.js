@@ -1,119 +1,76 @@
- console.log(produto);
+class carro {
 
-class Produto{
+    constructor(marca, ano) {
+        // atributos da classe
 
-  constructor(){
-      this.id=1;
-      this.arrayProdutos= [];
-      this.editId = null;
-  }
-  salvar(){
-      let produto = this.lerDados();
+        this.marca = marca;
+        this.ano = ano;
+    }
+    info() {
 
-      if(this.validaCampos(produto)){
-          if(this.editId == null){
-              this.adicionar(produto);
-          }else{
-              this.atualizar(this.editId, produto);
-          }
-      }
-      this.listaTabela();
-      this.cancelar();
-  }
+        if (this.marca == 1) {
 
-  listaTabela(){
-      let tbody= document.getElementById('tbody');
-      tbody.innerText = '';
+            console.log("marca do carro: fiat")
+        } else if (this.marca == 2) {
+            console.log("marca do carro: ferrari")
+        } else {
+            console.log("marca do carro: BMW")
+        }
+    }
+    set marca(m) {
 
-      for(let i = 0; i< this.arrayProdutos.length; i++){
-          let tr = tbody.insertRow();
+        this.marca = m
+    }
 
-          let td_id = tr.insertCell(); 
-          let td_produto = tr.insertCell(); 
-          let td_valor = tr.insertCell(); 
-          let td_acoes = tr.insertCell(); 
+    set ano(a) {
+        if (i < 0 || i > 50) {
+            alert("ano nao é valido")
+        } else {
 
-          td_id.innerText = this.arrayProdutos[i].id;
-          td_produto.innerText = this.arrayProdutos[i].nomeProduto;
-          td_valor.innerText = "R$ "+this.arrayProdutos[i].preco;
-
-          td_id.classList.add('center');
-
-          let imgEdit = document.createElement('img');
-          imgEdit.src = 'edit.png';
-          imgEdit.setAttribute("onclick", "produto.preparaEdicao("+ JSON.stringify(this.arrayProdutos[i]) +")");
-
-          let imgDelete = document.createElement('img');
-          imgDelete.src = 'trash.png';
-          imgDelete.setAttribute("onclick", "produto.deletar("+ this.arrayProdutos[i].id +")");
-
-          td_acoes.appendChild(imgEdit);
-          td_acoes.appendChild(imgDelete);
-
-      }
-  }
-  adicionar(produto){
-      produto.preco = parseFloat(produto.preco);
-      this.arrayProdutos.push(produto);
-      this.id++;
-      
-  }
-  atualizar(id, produto){
-      for(let i = 0; i < this.arrayProdutos.length; i++){
-          if(this.arrayProdutos[i].id == id){
-              this.arrayProdutos[i].nomeProduto = produto.nomeProduto;
-              this.arrayProdutos[i].preco = produto.preco;
-          }
-      }
-  }
-  preparaEdicao(dados){
-      this.editId = dados.id;
-      document.getElementById('produto').value = dados.nomeProduto;
-      document.getElementById('valor').value = dados.preco;
-
-      document.getElementById('button-salvar').innerText = 'Atualizar';
-      document.getElementById('button-salvar').style.backgroundColor = '#69c369';
-  }
-  lerDados(){
-      let produto = {}
-      produto.id = this.id;
-      produto.nomeProduto = document.getElementById('produto').value;
-      produto.preco = document.getElementById('valor').value;
-      
-      return produto;
-  }
-  validaCampos(produto){
-      let msg= '';
-
-      if(produto.nomeProduto == ''){
-          msg += '- Informe o nome do produto \n';
-      }
-      if(produto.preco == ''){
-          msg += '- Informe o preço do produto \n';
-      }
-      if(msg != ''){
-          alert(msg);
-          return false
-      }
-      return true
-  }
-  cancelar(){
-      let produto= document.getElementById('produto').value = '';
-      document.getElementById('valor').value = '';
-
-      document.getElementById('button-salvar').innerText = 'Salvar';
-      document.getElementById('button-salvar').style.backgroundColor = '#1093f3';
-      this.editId = null;
-  }
-  deletar(id){
-      let tbody = document.getElementById('tbody');
-
-      for(let i = 0; i < this.arrayProdutos.length; i++){
-          if(this.arrayProdutos[i].id == id){
-              this.arrayProdutos.splice(i,1);
-              tbody.deleteRow(i);
-          }
-      }
-  }
+            this.ano = a
+        }
+    z
 }
-var produto = new Produto();
+get marca() {
+    return this.marca
+}
+get ano() {
+     return this.ano
+}
+}
+class carroOffRoad extends carro {
+    constructor(pneu, tiporua) {
+        super('', '', '')
+        this.pneu = pneu
+        this.tiporua = tiporua
+    }
+    set pneu(p) {
+        this.pneu = p
+    }
+    get pneu() {
+        return this.pneu
+    }
+    set tiporua(t) {
+
+        this.idade = t
+    }
+    get tiporua() {
+        return this.tiporua
+    }
+}
+// primeiro carro
+let carro1 = new carroOffRoad()
+carro1.setano = 10
+carro1.setmarca = "bmw"
+carro1.setpneu = "aro 24"
+carro1.tiporua = "terrenos aridos"
+console.log("carro1: " + carro1)
+carri1.info()
+// segundo carro
+let dog2 = new cachorro()
+carro2.setano = 2
+carro2.setmarca = "marca"
+carro1.setpneu = "aro 25"
+carro1.tiporua = "terrenos aridos"
+console.log("carro2: " + dog2)
+carro2.info()
