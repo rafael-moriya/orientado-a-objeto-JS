@@ -47,3 +47,11 @@ footer{
     left: 50%;
     transform: translateX(-50%);
 }
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: tomato;
+}
