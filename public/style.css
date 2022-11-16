@@ -11,7 +11,10 @@ body{
     background-position: center;
     background-position-y: -10%;
 }
-
+.row{
+gap: 2rem;
+    justify-content: center;
+}
 .main{
 
 }
