@@ -1,3 +1,8 @@
+@media (max-width: 1200) {
+    section{
+    width: 1000px;
+} }
+
 .flip-card {
     background-color: transparent;
     width: 300px;

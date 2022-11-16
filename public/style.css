@@ -1,3 +1,8 @@
+@media (max-width: 1200) {
+    section{
+    width: 1000px;
+} }
+
 body{
     height: auto;
     width: 100%;
