@@ -13,10 +13,7 @@ body{
 }
 
 .main{
-    position: fixed;
-    top: 35%;
-    left: 50%;
-    transform: translateX(-50%);
+
 }
 
 .title h1, h2, h3{
